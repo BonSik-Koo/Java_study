@@ -10,4 +10,5 @@
 - collection Framework는 크게 "Collection" , "Map"으로 나누어 진다. -> 이둘은 인터페이스이다.
 - collection은 List와 Set, Queue으로 나누어 지고 이둘도 인터페이스이다.
 
-![1111](https://user-images.githubusercontent.com/96917871/150381812-303d0f65-f574-4f55-ad32-90d833f62ef3.PNG)
+![222](https://user-images.githubusercontent.com/96917871/150382274-f3a5013c-dbe1-42cf-8c47-cbd99b7e7caf.PNG)
+
