@@ -4,29 +4,18 @@
 - 사용자가 정의한 클래스, 필드, 메소드등을 자료형에 따라 변경할 필요없이 모든 자료형에 적용할 수 있다.
 
 class Sample<T> { //받을 객체의 타입이 지정하지 않는다.(제네릭은 Object(객체) 자료형만 받을수 있다!!!!!, int,double(기본자료형)은 안된다!!
-8
     private T obj;
-9
     Sample(T x) { this.obj=x; }
-10
     T getObj() { return obj;}
-11
     void printinfo() { System.out.println(obj.getClass().getName());}
-12
 }
-13
+
 public class Generic {
-14
     public static void main(String[] args){
-15
-​
-16
+
         Sample<Integer> sam= new Sample<Integer>(10);
-17
         sam.printinfo();
-18
         System.out.println(sam.getObj());
-19
     }
-20
 }
+
