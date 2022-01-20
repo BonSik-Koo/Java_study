@@ -20,6 +20,11 @@
 - 인터페이스를 이용하면 메서드의 추상적인 "선어"과 그 메서들을 구체적인 "구현" 부분을 분리시킬 수 있다.
 - 분업화된 시스템을 구축하여 "갑"과 "을"이 독립적으로 프로젝트를 개발할수 있다(분리시켜).
 
+⑥ 우선순위
+- extends, implements 키워드가 동시에 쓰일때 ->extends 키워드가 항상 먼저 쓰인다.
+예) class Student extends Person implements A,B -> Student은 자식클래스, Person,A,B는 부모 클래스에 
+
+
 
 
 
