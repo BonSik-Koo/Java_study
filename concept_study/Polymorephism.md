@@ -19,7 +19,8 @@
 ④ 자식클래스에서 오버라이딩된 부모 클래스의 원본 메소드 호출 방식
 - 오버라이딩된 자식 클래스의 메소드에 "super"의 키워드와 메소드 이름을 적어주어 호출한다.
 
-  ex) class Person { //자식 클래스
+  
+      class Person { //자식 클래스
     
       public void printf() { System.out.println("Person"):} }
     
