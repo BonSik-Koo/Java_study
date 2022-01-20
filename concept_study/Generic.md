@@ -12,7 +12,7 @@
 
 
 
-class Sample<T> { //받을 객체의 타입이 지정하지 않는다.(제네릭은 Object(객체) 자료형만 받을수 있다!!!!!, int,double(기본자료형)은 안된다!!
+ class Sample<T> { //받을 객체의 타입이 지정하지 않는다.(제네릭은 Object(객체) 자료형만 받을수 있다!!!!!, int,double(기본자료형)은 안된다!!
     private T obj;
     Sample(T x) { this.obj=x; }
     T getObj() { return obj;}
