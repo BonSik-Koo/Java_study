@@ -6,7 +6,7 @@
 
 ※기본 자료형은 제일 앞이 소문자로시작! 객체 자료형은 제일 앞이 대문자로 시작!
 
-public class Type_TransAndCheck {
+
     public static void main(String[] args){
 
         String name="123";
@@ -31,4 +31,4 @@ public class Type_TransAndCheck {
         double num_4=Double.parseDouble(name);
         String nb=Double.toString(y);
     }
-}
+
