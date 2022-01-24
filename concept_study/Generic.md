@@ -6,7 +6,7 @@ __제네릭(generic)이란 -> c/c++에서의 템플릿의 역할__
 
 ※주의
 - 제네릭 타입의 배열을 선언할 수 없음  ex) T[]a=new T[10] --> xxx!!
-- 제네릭 또는 인터페이스의 배열도 허용하지 않음 ex) Stack<Integer>[] s=new Stack<Integer>[10] --> xxx!!!!!!
+- 제네릭 클래스 또는 인터페이스의 배열도 허용하지 않음 ex) Stack<Integer>[] s=new Stack<Integer>[10] --> xxx!!!!!!
 
 ```
 class Sample<T> { //받을 객체의 타입이 지정하지 않는다.(제네릭은 Object(객체) 자료형만 받을수 있다!!!!!, int,double(기본자료형)은 안된다!!
