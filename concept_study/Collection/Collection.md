@@ -12,9 +12,7 @@ __③ 분류__
 
 ![222](https://user-images.githubusercontent.com/96917871/150382274-f3a5013c-dbe1-42cf-8c47-cbd99b7e7caf.PNG)
 
-(2) Vector
-- ArrayList에 동기화가 보장되도록 최적화한 클래스.
-- 모든 메소드가 동기화 되어있어서 잘 사용하지 않음.
+
 
 (3) LinkedList
 - 노드, 링크 로 구성된다.
