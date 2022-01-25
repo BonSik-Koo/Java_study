@@ -1,4 +1,4 @@
-![111](https://user-images.githubusercontent.com/96917871/151001776-bca072ef-bd1f-4cb0-a11c-89aa6257bfde.PNG) ![2222](https://user-images.githubusercontent.com/96917871/151001787-61c5db78-7a44-4704-a161-6890ae064ed3.PNG)
+![2222](https://user-images.githubusercontent.com/96917871/151001787-61c5db78-7a44-4704-a161-6890ae064ed3.PNG)
 
 __JVM(Java Virtual Machine)이란__
 =====================
@@ -6,6 +6,7 @@ __JVM(Java Virtual Machine)이란__
   자동으로 바이너리 코드를 이해 할수 있도록 번역 해주는 역할을 한다.
   --> 운영체제 별로 JVM이 존재한다.
   --> 운영체제에 맞게 "컴파일러가" 필요하지만 java에는 JVM이 있어 하나의 컴파일러를 사용하여 운영체제에 적용할 수 있다.
+![111](https://user-images.githubusercontent.com/96917871/151001776-bca072ef-bd1f-4cb0-a11c-89aa6257bfde.PNG) 
 
 __JRE(Java Runtime Enviroment)이란__
 ------------------------------------------
@@ -20,3 +21,8 @@ __JDK(Java Development Kit)이란__
 - 컴파일러, 디버그 도구 등이 포함
 
 
+
+
+
+
+![111](https://user-images.githubusercontent.com/96917871/151001776-bca072ef-bd1f-4cb0-a11c-89aa6257bfde.PNG) 
