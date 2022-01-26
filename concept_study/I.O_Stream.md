@@ -8,7 +8,11 @@ __Stream의 구분__
 ----------------------
 (1) 대상기준 -> 입력 스트림/출력 스트림  
 (2) 자료의 종류 기준 -> 바이트 스트림/문자 스트림  
-(3) 기능 기준 -> 기반 스트림(1차 스트림) / 보조 스트림(2차 스트림)  
+(3) 기능 기준 
+-> 기반 스트림(1차 스트림) : 대상에 직접 자료를 읽고 쓰는 기능의 스트림      
+-> 보조 스트림(2차 스트림) : 직접 읽고 쓰는 기능 없이 기반스트림에 추가적인 기능을 더해주는 스트림!!, 기반스트림의 종류(바이트, 문자스트림)에 맞는 보조스트림을 사용해야 된다,     
+                           항상 기반스트림이나 또 다른 보조 스트림을 생성자 매개변수로 가진다.
+
 
 __<바이트 스트림>__
 - 1바이트씩 읽고 쓰는 스트림(정수형 데이터, 문자 데이터들을 한자씩 읽고 쓴다)
@@ -18,7 +22,7 @@ __<바이트 스트림>__
 
 -System.in / System.out- -->기반스트림
 ```
-System.out.println("알파벳 하나는 입력하시오");
+        System.out.println("알파벳 하나는 입력하시오");
         int i=0;
 
         try {
@@ -31,7 +35,7 @@ System.out.println("알파벳 하나는 입력하시오");
 
 -FileInputStream / FileOutputStream- -->기반스트림
 ```
-File f = new File("input.txt");
+        File f = new File("input.txt");
         FileInputStream file = null;
         FileOutputStream file2 =null;
 
@@ -58,8 +62,8 @@ File f = new File("input.txt");
 ```
 
 - BufferedInputStream / BufferedInputStream-  -->보조 스트림
-```
-System.out.println("알파벳 10개를 입력하시오");
+```     
+        System.out.println("알파벳 10개를 입력하시오");
         int i=0;
         BufferedInputStream bu = null;
         byte[] b = new byte[10];
@@ -76,7 +80,8 @@ System.out.println("알파벳 10개를 입력하시오");
         }
 ```
 ```
-int k=0;
+        System.out.println("입력하시오");
+        int k=0;
         BufferedOutputStream out = null;
         try {
             out =new BufferedOutputStream(System.out,5); //5바이트크기의 버퍼를 설정
