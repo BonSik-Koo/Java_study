@@ -95,13 +95,14 @@ __<바이트 스트림>__
 ```
 
 
+
 __<문자 스트림>__
 (1) 2바이트 단위로 처리하는 스트림(문자 데이터(한글)들을 처리할때 주로 사용) -> 한글을 깨지지 않고 읽고 쓸수 있다.            
 (2) 종류            
 - 입력 관련: FileReader(기반), InputStreamReader(보조), BufferedReader(보조)
 - 출력 관련: FileWriter(기반), OutputStreamWriter(보조) ,BufferedWriter(보조)
 
--FileReader / FileWriter- -->기반 스트림
+-FileReader / FileWriter-  -->기반 스트림
 ```
         File f = new File("input.txt");
         FileReader fin = null;
@@ -122,7 +123,7 @@ __<문자 스트림>__
         }
 ```
 
--OutputStreamReader / OutputStreamWriter- -->보조 스트림
+-OutputStreamReader / OutputStreamWriter-  -->보조 스트림
 ```
         try {
             // 바이트로 읽은 데이터를 문자(2바이트)로 변환시키는 2차 스트림("InputStreamReader") -> 한글도 사용이 가능해짐
@@ -137,6 +138,30 @@ __<문자 스트림>__
             output.flush();
 
         }catch (Exception e) {
+            System.out.println(e);
+        }
+```
+
+-BufferedReader / BufferedWrite-  -->보조 스트림
+```
+        File file = new File("input.txt");
+        String temp;
+        int i=0;
+        BufferedReader bu = null;
+        BufferedWriter bo =null;
+
+        try {
+            //문자스트림("FileReader")의 보조스트림인 "BufferedReader"사용!!->문자스트림(기반)은 아무거나 사용하능
+            bu = new BufferedReader(new FileReader(file));
+            bo = new BufferedWriter(new FileWriter("output10.txt") ,5);
+
+            while((temp = bu.readLine()) !=null) {// "BufferedReader" 보조스트림에서만 한줄씩 읽기가 가능한 메소드를 제공해준다.
+                bo.write(temp);
+                //System.out.println(temp);
+            }
+            bo.flush();
+
+        }catch(Exception e) {
             System.out.println(e);
         }
 ```
