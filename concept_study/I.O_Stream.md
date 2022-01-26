@@ -95,14 +95,52 @@ __<바이트 스트림>__
 ```
 
 
-
-
-
-
-
 __<문자 스트림>__
-- 2바이트 단위로 처리하는 스트림(문자 데이터(한글)들을 처리할때 주로 사용) -> 한글을 깨지지 않고 읽고 쓸수 있다.
-- 종류 : FileReader(기반), InputStreamReader(보조)
+(1) 2바이트 단위로 처리하는 스트림(문자 데이터(한글)들을 처리할때 주로 사용) -> 한글을 깨지지 않고 읽고 쓸수 있다.            
+(2) 종류            
+- 입력 관련: FileReader(기반), InputStreamReader(보조), BufferedReader(보조)
+- 출력 관련: FileWriter(기반), OutputStreamWriter(보조) ,BufferedWriter(보조)
+
+-FileReader / FileWriter- -->기반 스트림
+```
+        File f = new File("input.txt");
+        FileReader fin = null;
+        FileWriter out = null;
+        int i=0;
+
+        try {
+            out = new FileWriter("fwn.txt");
+            fin = new FileReader(f); //문자스트림(기반) 생성
+            //out = new FileWriter("output2.txt");
+
+            while((i=fin.read())!=-1) { //File에서 문자를 하나 읽은 후 int형으로 반환해준다. -> 한글인(2바이트) 경우에도 깨지지 않는다.
+                out.write(i); //int형을 받아서 매칭되는 문자를 출력해준다. (String,char[]등..전달할수 있는 인수다양)
+            }
+            out.flush(); //출력버퍼에 남아있는 값들을 출력
+        }catch (IOException e) {
+            System.out.print(e);
+        }
+```
+
+-OutputStreamReader / OutputStreamWriter- -->보조 스트림
+```
+        try {
+            // 바이트로 읽은 데이터를 문자(2바이트)로 변환시키는 2차 스트림("InputStreamReader") -> 한글도 사용이 가능해짐
+            InputStreamReader input =new InputStreamReader(System.in);
+            //"FileOutputStream은 바이트스트림이기 때문에 한글이 깨지는 현상이 일어난다. 보조스트림인 "OutputStreamWriter"를 사용하여 문자로 변환시켜 출력할수 있다 ->한글도 깨지지 않는다.
+            OutputStreamWriter output = new OutputStreamWriter(new FileOutputStream("output4.txt"));
+            int i=0;
+
+            while((i=input.read()) != 97) { //System.in 스트림을 통해 1바이트씩 읽고 읽은 바이트 데이터를 문자로(2바이트) 변경된다.
+                output.write(i);
+            }
+            output.flush();
+
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+```
+
 
 
 
