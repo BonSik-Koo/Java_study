@@ -13,6 +13,8 @@ __Stream의 구분__
 -> 보조 스트림(2차 스트림) : 직접 읽고 쓰는 기능 없이 기반스트림에 추가적인 기능을 더해주는 스트림, 기반스트림의 종류(바이트, 문자스트림)에 맞는 보조스트림을 사용해야 된다, 항상 기반스트림이    나 또 다른 보조 스트림을 생성자 매개변수로 가진다.
 
 
+
+
 __<바이트 스트림>__       
 (1) 1바이트씩 읽고 쓰는 스트림(정수형 데이터, 문자 데이터들을 한자씩 읽고 쓴다)               
 (2) 바이트 단위로 자료를 처리하기 때문에 문자 데이터는 깨진다!!! -> 2바이트 단위로 처리하는 문자 스트림을 사용해야지만 문자가 깨지지 않는다.                
@@ -20,7 +22,7 @@ __<바이트 스트림>__
 -입력관련 -> System.in(기반), FileInputStream(기반), DateInputStream(기반), BufferedInputStream(보조)                                      
 -출력관련 -> System.out(기반), FileOuputStream(기반), DateOuputStream(기반), BufferedOutputStream(보조)
 
--System.in / System.out- -->기반스트림
+-System.in / System.out -->기반스트림
 ```
         System.out.println("알파벳 하나는 입력하시오");
         int i=0;
@@ -33,7 +35,7 @@ __<바이트 스트림>__
         System.out.println((char)i);
 ```
 
--FileInputStream / FileOutputStream- -->기반스트림
+-FileInputStream / FileOutputStream -->기반스트림
 ```
         File f = new File("input.txt");
         FileInputStream file = null;
@@ -61,7 +63,7 @@ __<바이트 스트림>__
         }
 ```
 
-- BufferedInputStream / BufferedInputStream-  -->보조 스트림
+-BufferedInputStream / BufferedInputStream  -->보조 스트림
 ```     
         System.out.println("알파벳 10개를 입력하시오");
         int i=0;
@@ -96,13 +98,14 @@ __<바이트 스트림>__
 
 
 
-__<문자 스트림>__
-(1) 2바이트 단위로 처리하는 스트림(문자 데이터(한글)들을 처리할때 주로 사용) -> 한글을 깨지지 않고 읽고 쓸수 있다.            
-(2) 종류            
-- 입력 관련: FileReader(기반), InputStreamReader(보조), BufferedReader(보조)
-- 출력 관련: FileWriter(기반), OutputStreamWriter(보조) ,BufferedWriter(보조)
 
--FileReader / FileWriter-  -->기반 스트림
+__<문자 스트림>__           
+(1) 2바이트 단위로 처리하는 스트림(문자 데이터(한글)들을 처리할때 주로 사용) -> 한글을 깨지지 않고 읽고 쓸수 있다.                  
+(2) 종류              
+- 입력 관련: FileReader(기반), InputStreamReader(보조), BufferedReader(보조)           
+- 출력 관련: FileWriter(기반), OutputStreamWriter(보조) ,BufferedWriter(보조)       
+
+-FileReader / FileWriter  -->기반 스트림    
 ```
         File f = new File("input.txt");
         FileReader fin = null;
@@ -123,7 +126,7 @@ __<문자 스트림>__
         }
 ```
 
--OutputStreamReader / OutputStreamWriter-  -->보조 스트림
+-OutputStreamReader / OutputStreamWriter  -->보조 스트림      
 ```
         try {
             // 바이트로 읽은 데이터를 문자(2바이트)로 변환시키는 2차 스트림("InputStreamReader") -> 한글도 사용이 가능해짐
@@ -142,7 +145,7 @@ __<문자 스트림>__
         }
 ```
 
--BufferedReader / BufferedWrite-  -->보조 스트림
+-BufferedReader / BufferedWrite  -->보조 스트림    
 ```
         File file = new File("input.txt");
         String temp;
