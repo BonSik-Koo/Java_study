@@ -15,6 +15,7 @@ __<바이트 스트림>__
 - 바이트 단위로 자료를 처리하기 때문에 문자 데이터는 깨진다!!! ->2 바이트 단위로 처리하는 문자 스트림을 사용해야지만 문자가 깨지지 않는다.
 - 종류 : 입력관련 -> System.in , FileInputStream , DateInputStream      
            출력관련 -> System.in , FileOuputStream, DateOuputStream    
+
 -System.in-
 ```
 System.out.println("알파벳 하나는 입력하시오");
