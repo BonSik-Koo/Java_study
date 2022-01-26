@@ -10,11 +10,11 @@ __Stream의 구분__
 (2) 자료의 종류 기준 -> 바이트 스트림/문자 스트림  
 (3) 기능 기준 -> 기반 스트림(1차 스트림) / 보조 스트림(2차 스트림)  
 
-__바이트 스트림__
+__<바이트 스트림>__
 - 1바이트씩 읽고 쓰는 스트림(정수형 데이터, 문자 데이터들을 한자씩 읽고 쓴다)
 - 바이트 단위로 자료를 처리하기 때문에 문자 데이터는 깨진다!!! ->2 바이트 단위로 처리하는 문자 스트림을 사용해야지만 문자가 깨지지 않는다.
 - 종류 : 입력관련 -> System.in , FileInputStream , DateInputStream    
-         출력관련 -> System.in , FileOuputStream, DateOuputStream    
+           출력관련 -> System.in , FileOuputStream, DateOuputStream    
 
 
 
