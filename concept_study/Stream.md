@@ -56,7 +56,13 @@ public class Pratice_Stream {
         sList.stream()
                 .filter(s -> s.equals(x)) //중간연산자 -> stream을 반환한다.
                 .forEach(a-> System.out.println(a)); //최종연산이 호출되어야 중간연산결과가 적용된다.
-
+ 
+        /*최종연산자 findAny() 사용예시*/
+        String y="dddd";
+        Optional<String> op = sList.stream()
+                .filter(s -> s.equals(y)) //중간연산자 -> stream을 반환한다.
+                .findAny(); //앞서 중간연산자에 찾은 값을 Optional 형태로 감싸서 반환하게 된다.!!!!!!!!!!!!!
+        System.out.println(op);
     }
 }
 ```
