@@ -26,7 +26,15 @@ class Stu {
         this.id=id;
         this.tell=tell;
     }
-    public String toString() { return id+ ":"+tell;}
+    public String toString() { return id+ ":"+tell;}   //오버라이딩 함수!!
+    
+    public boolean equals(Object temp) {  //오버라이딩 함수!!
+        if(temp instanceof Stu) {
+            if(((Stu)temp).id==this.id && this.tell == ((Stu)temp).tell){ return true; }
+            else { return false;}
+        }
+        else { return false;}
+    }
 }
 public class Collection_HashMap {
     public static void main(String[] args) {
@@ -74,7 +82,12 @@ public class Collection_HashMap {
             Stu st = stu_info.get(key_2);
             System.out.println(st);
         }
+
+        /** map에서 key,value의 유무를 boolean으로 조히하는 함수**/
         System.out.println();
+        System.out.println("boolean:" + stu_info.containsKey("이영희"));
+        Stu t = new Stu(3, "010-3333-3333");
+        System.out.println("boolean:" + stu_info.containsValue(t));
 
         set_2.clear(); //모든 값을 삭제한다.
         System.out.println(set_2.size());
